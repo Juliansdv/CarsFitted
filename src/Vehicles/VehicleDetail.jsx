@@ -1,5 +1,5 @@
-import { Image, Text, View, Pressable, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
+import { Image, Text, View, Pressable, StyleSheet, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export const VehicleDetail = ({ name, type, price, image }) => {
@@ -9,7 +9,7 @@ export const VehicleDetail = ({ name, type, price, image }) => {
     return (
         <ScrollView>
             <View style={{ margin: 50 }}>
-                <Image style={{ width: 300, height: 300 }} source={{ uri: ("https://cdn.discordapp.com/attachments/793216364202164274/1215434434250149998/iu.png?ex=65fcbc86&is=65ea4786&hm=6b597afd942884c8d7d5d92c53f1908146438f4ab19105a540eb9b1f8f5b099a&") }} />
+                <Image style={{ width: 300, height: 300 }} source={{ uri: ("https://www.hdcarwallpapers.com/thumbs/2013/2014_porsche_911_turbo_s-t2.jpg") }} />
                 <Text style={{ fontSize: 20, marginTop: 25, fontWeight: "bold", color: 'black' }}>
                     Nombre: {"Pegassi Zentorno"}
                 </Text>

@@ -1,9 +1,9 @@
+import React, { useState } from 'react';
 import { View, SafeAreaView, TextInput, StyleSheet, Text } from 'react-native';
-import React from 'react';
 
 export const SearchBar = () => {
 
-    const [text, setText] = React.useState('Ingresa la búsqueda');
+    const [text, setText] = useState('Ingresa la búsqueda');
 
     return (
         <View >

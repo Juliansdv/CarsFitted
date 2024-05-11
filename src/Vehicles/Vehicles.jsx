@@ -5,11 +5,11 @@ import { SearchBar } from './SearchBar'
 import { VehicleCardCreator } from './VehicleCardCreator'
 
 const data = [
-    { "key": 1, "name": "Pegassi Zentorno", "type": "Usado", "price": "20'000.000", "description": "Un vehículo muy adecuado", "image": "https://cdn.discordapp.com/attachments/793216364202164274/1215434434250149998/iu.png?ex=65fcbc86&is=65ea4786&hm=6b597afd942884c8d7d5d92c53f1908146438f4ab19105a540eb9b1f8f5b099a&" },
-    { "key": 2, "name": "Dinka Jester", "type": "Nuevo", "price": "10'000.000", "description": "Un vehículo muy adecuado", "image": "https://cdn.discordapp.com/attachments/793216364202164274/1215434531666923560/iu.png?ex=65fcbc9e&is=65ea479e&hm=0e2e60bbd4e080666a9786265b67adadb593763c4ce68b2ef2367e13065ab863&" },
-    { "key": 3, "name": "Benefactor Surano", "type": "Usado", "price": "20'000.000", "description": "Un vehículo muy adecuado", "image": "https://cdn.discordapp.com/attachments/793216364202164274/1215434790673719326/iu.png?ex=65fcbcdb&is=65ea47db&hm=764ad3c9ec655fcddd9ba915e329b2d5f61e4e64c413ad0793e4d390cdce7c85&" },
-    { "key": 4, "name": "Bravado Buffalo", "type": "Nuevo", "price": "40'000.000", "description": "Un vehículo muy adecuado", "image": "https://cdn.discordapp.com/attachments/793216364202164274/1215435206509600768/iu.png?ex=65fcbd3e&is=65ea483e&hm=e6c46643980b644753cdd9ecff0fac340de580ca7013f11597052b038f85f3d3&" },
-    { "key": 5, "name": "Obey 9F", "type": "Usado", "price": "100'000.000", "description": "Un vehículo muy adecuado", "image": "https://cdn.discordapp.com/attachments/793216364202164274/1215435338340638730/iu.png?ex=65fcbd5e&is=65ea485e&hm=0b99edfb566a9709c1144acb5ff37ef145ac71aa709d9641da35b0d0280f4f03&" },
+    { "key": 1, "name": "Pegassi Zentorno", "type": "Usado", "price": "20'000.000", "description": "Un vehículo muy adecuado", "image": "https://firebasestorage.googleapis.com/v0/b/carsfitted-e4763.appspot.com/o/car1.png?alt=media&token=ab1aa6bb-21a7-461c-887a-5398947b3665" },
+    { "key": 2, "name": "Dinka Jester", "type": "Nuevo", "price": "10'000.000", "description": "Un vehículo muy adecuado", "image": "https://firebasestorage.googleapis.com/v0/b/carsfitted-e4763.appspot.com/o/car2.png?alt=media&token=5b43d96a-54bb-47aa-8a68-a5e1a7e65311" },
+    { "key": 3, "name": "Benefactor Surano", "type": "Usado", "price": "20'000.000", "description": "Un vehículo muy adecuado", "image": "https://firebasestorage.googleapis.com/v0/b/carsfitted-e4763.appspot.com/o/car3.png?alt=media&token=73fa4473-f37b-4a27-9a83-934e4c19b473" },
+    { "key": 4, "name": "Bravado Buffalo", "type": "Nuevo", "price": "40'000.000", "description": "Un vehículo muy adecuado", "image": "https://firebasestorage.googleapis.com/v0/b/carsfitted-e4763.appspot.com/o/car4.png?alt=media&token=41b9db9d-e992-4bca-9ee4-67f009bbd380" },
+    { "key": 5, "name": "Obey 9F", "type": "Usado", "price": "100'000.000", "description": "Un vehículo muy adecuado", "image": "https://firebasestorage.googleapis.com/v0/b/carsfitted-e4763.appspot.com/o/car5.png?alt=media&token=38917177-3f6a-4c33-ac7d-bf5606abb02c" },
 ]
 
 export const Vehicles = () => {
