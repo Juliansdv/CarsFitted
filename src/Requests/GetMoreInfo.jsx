@@ -6,7 +6,22 @@ export const GetMoreInfo = () => {
 
     const navigation = useNavigation();
 
-    const [mail, setMail] = React.useState('Ingresa tu correo: ');
+    const [mail, setMail] = React.useState('');
+
+    const [errors, setErrors] = React.useState({});
+
+    React.useEffect(() => {
+        validateForm();
+    }, [mail]);
+
+    const validateForm = () => {
+        let errors = {};
+
+        if (!mail) {
+            errors.mail = 'El correo es requerido.';
+        }
+        setErrors(errors);
+    };
 
     return (
         <ScrollView>
@@ -15,12 +30,22 @@ export const GetMoreInfo = () => {
                     style={styles.input}
                     onChangeText={setMail}
                     value={mail}
+                    placeholder='Ingresa tu correo:'
                 />
+
+                {Object.values(errors).map((error, index) => (
+                    <Text key={index} style={styles.error}>
+                        {error}
+                    </Text>
+                ))}
+
                 <Pressable style={styles.button} onPress={() => { navigation.navigate('VehicleDetail') }}>
                     <Text style={styles.text}>Solicitar</Text>
                 </Pressable>
+
             </View>
         </ScrollView>
+
     );
 
 }
@@ -49,5 +74,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         letterSpacing: 0.25,
         color: 'white',
+    },
+    error: { 
+        color: 'red', 
+        fontSize: 15, 
+        marginTop: 12, 
     },
 });
