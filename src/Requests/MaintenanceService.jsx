@@ -6,9 +6,34 @@ export const MaintenanceService = () => {
 
     const navigation = useNavigation();
 
-    const [date, setDate] = React.useState('Ingresa la fecha para el mantenimiento: ');
-    const [name, setName] = React.useState('Ingresa tus nombres: ');
-    const [lastname, setLastname] = React.useState('Ingresa tus apellidos: ');
+    const [date, setDate] = React.useState('');
+    const [name, setName] = React.useState('');
+    const [lastname, setLastname] = React.useState('');
+
+    const [errors, setErrors] = React.useState({});
+
+    React.useEffect(() => {
+        validateForm();
+    }, [date, name, lastname]);
+
+    const validateForm = () => {
+        let errors = {};
+
+        if (!date) {
+            errors.date = 'La fecha es requerida.';
+        }
+        if (!name) {
+            errors.name = 'El nombre es requerido.';
+        } else if (!/[a-zA-Z]+/.test(name)) {
+            errors.name = 'El nombre contiene un caracter inválido.';
+        }
+        if (!lastname) {
+            errors.lastname = 'El apellido es requerido.';
+        } else if (!/[a-zA-Z]+/.test(lastname)) {
+            errors.lastname = 'El apellido contiene un caracter inválido.';
+        }
+        setErrors(errors);
+    };
 
     return (
         <ScrollView>
@@ -17,17 +42,29 @@ export const MaintenanceService = () => {
                     style={styles.input}
                     onChangeText={setDate}
                     value={date}
+                    keyboardType='numeric'
+                    placeholder='Ingresa la fecha:'
+                    maxLength={10}
                 />
                 <TextInput
                     style={styles.input}
                     onChangeText={setName}
                     value={name}
+                    placeholder='Ingresa tus nombres:'
                 />
                 <TextInput
                     style={styles.input}
                     onChangeText={setLastname}
                     value={lastname}
+                    placeholder='Ingresa tus apellidos:'
                 />
+
+                {Object.values(errors).map((error, index) => (
+                    <Text key={index} style={styles.error}>
+                        {error}
+                    </Text>
+                ))}
+
                 <Pressable style={styles.button} onPress={() => { navigation.navigate('VehicleDetail') }}>
                     <Text style={styles.text}>Solicitar</Text>
                 </Pressable>
@@ -61,5 +98,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         letterSpacing: 0.25,
         color: 'white',
+    },
+    error: {
+        color: 'red',
+        fontSize: 15,
+        marginTop: 12,
     },
 });
